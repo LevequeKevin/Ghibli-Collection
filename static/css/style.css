@@ -9,10 +9,14 @@
 }
 
 header {
-  margin: 1rem 2rem 2.5rem;
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: calc(100px + 2rem);
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
 }
 
 .logo {
@@ -30,6 +34,9 @@ nav a {
   font-weight: 400;
   margin-left: 2rem;
   font-size: 1.2rem;
+}
+a:hover {
+  color: rgb(136, 84, 84);
 }
 nav a:nth-child(n + 2) {
   color: rgb(136, 136, 136);
@@ -132,4 +139,93 @@ nav a:nth-child(n + 2) {
   p {
     font-size: .8rem;
   }
+}
+
+/* Footer */
+.container__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  position: relative;
+  height: 400px;
+  background-position-x: 100%;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-image: url(/static/img/totoro.webp);
+  background-size: 500px;
+}
+.footer__section {
+  display: flex;
+  margin-top: 2rem;
+  max-width: 80%;
+  justify-content: space-between;
+}
+.footer__column li {
+  margin-bottom: 1.2rem;
+}
+.footer__column h4 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+.footer__column--about {
+  max-width: calc(100% / 3);
+  text-align: justify;
+}
+.footer__column--contact {
+  max-width: calc(100% / 3);
+}
+.footer__column--follow {
+  max-width: calc(100% / 3);
+  a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+    font-weight: 700;
+  }
+}
+
+/* Form */
+.container__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.form__text {
+  max-width: 18rem;
+}
+
+.container__submit {
+  display: flex;
+}
+
+form input {
+  height: 2.375rem;
+  width: 25rem;
+  margin: 0 .5rem;
+  line-height: 2.375rem;
+  padding: 1rem;
+}
+
+form input::placeholder {
+  line-height: 2.375rem;
+  font-size: 1rem;
+}
+
+.submit {
+  height: 2.375rem;
+  width: 5rem;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.footer__copyright {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
 }
