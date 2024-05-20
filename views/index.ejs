@@ -1,0 +1,41 @@
+<%- include('./partials/_header.ejs') %>
+    <div class="container__about">
+      <div class="title__img title__img--about">
+        <h1>About</h1>
+        <img src="/img/about.webp" alt="">
+      </div>
+      <div class="text--about">
+        <p>Founded in 1985 by Isao Takahata and Hayao Miyazaki,
+          Studio Ghibli has produced 22 acclaimed films. SPIRITED 
+          AWAY (2001) is japan's highest-grossing film. Ghibli's works
+          earned global praise, with awards like the 2002 Academy
+          Award for Best Animated Feature. The Ghibli Museum
+          opened in 2001. Recent films like THE WIND RISES (2013) and
+          THE RED TURTLE (2016) secured consecutive Academy 
+          Award nominations. The studio is actively working on new 
+          productions.
+        </p>
+      </div>
+    </div>
+
+    <div class="container__movie" id="movie">
+      <div class="title__img title__img--movie">
+        <h1>Our Movies</h1>
+        <img src="img/movie.webp" alt="">
+      </div>
+    </div>
+    <div class="container__movie-card">
+      <ul>
+        <li>
+          <div class="container__card">
+            <img src="<%= film.image_src %>" alt="Cover of the movie <%= film.title %>">
+            <h3><%= film.title %></h3>
+            <div class="movie-card__information">
+              <p><%= film.release_date> | <%= film.duration> min</p>
+              <p>note</p>
+            </div>
+          </div>
+        </li>
+  </main>
+</body>
+</html>
