@@ -11,7 +11,9 @@ app.use(express.static('public'));
 
 app.use(router)
 
-
+app.use((req, res) => {
+  res.status(404).render('error/404');
+});
 
 
 
