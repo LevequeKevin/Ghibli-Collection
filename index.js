@@ -1,11 +1,15 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
-const router = require('./router');
+const router = require('./app/router');
 
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', './app/views');
 
+app.use(express.static('public'));
 
+app.use(router)
 
 
 
