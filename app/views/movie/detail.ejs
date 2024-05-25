@@ -1,4 +1,19 @@
 <%- include('../partials/_header.ejs') %>
-
-
+<div class="container__movie-detail">
+  <div class="movie-poster"><img src="<%= movie.image_src %>" alt=""></div>
+  <div class="container__movie-text">
+    <div class="movie__title--rating">
+      <h1 class="movie__title"><%= movie.title %></h1>
+      <div class="movie__rating"><img src="/img/imdb.svg" alt="" srcset="" class="movie-card__rating--img"><p><%= movie.imdb_rating %></p></div>
+    </div>
+    <span class="movie__title--original"><%= movie.orignal_title %></span>
+    <p class="movie__text--director">Director : <b><%= movie.director %></b></p>
+    <div class="movie__text">
+      <span class="movie__text--date"><%= movie.release_date %></span>
+      <span class="movie__text--duration">Duration : <b><%= movie.duration %> min</b></span>
+    </div>
+    <p class="movie__text--description"><%= movie.description %></p>
+  </div>
+</div>
+</main>
 <%- include('../partials/_footer.ejs') %>

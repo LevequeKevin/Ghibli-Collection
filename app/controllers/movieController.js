@@ -14,12 +14,11 @@ const movieController = {
     try{
       const movieId = Number(req.params.id);
       const movie = await dataMapper.getOneMovie(movieId);
-      console.log('movie :>> ', movie);
       if (!movie) {
         next();
         return;
       }
-      res.render('movie/detail', movie)
+      res.render('movie/detail', {movie})
     }catch(error){
       console.error(error);
       res.status(500).render('error/500');

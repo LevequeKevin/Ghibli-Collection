@@ -10,7 +10,7 @@
     <% movies.forEach(movie => { %>
       <li>
         <div class="container__card">
-          <img src="<%= movie.image_src %>" alt="Cover of the movie <%= movie.title %>">
+          <a href="/movies/<%= movie.id %>"><img src="<%= movie.image_src %>" alt="Cover of the movie <%= movie.title %>"></a>
           <h3><%= movie.title %></h3>
           <div class="movie-card__information">
             <p><%= movie.release_date %> | <%= movie.duration%> min</p>
