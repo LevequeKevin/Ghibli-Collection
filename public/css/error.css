@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+body, html {
+  height: 100%;
+}
+.error-container {
+  height: calc(100% - (100px + 2rem));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(to bottom, #141E30, #243B55);
+  color: white;
+}
+.error-text {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.error-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-family: "Sedan SC", serif;
+    font-size: 25rem;
+    line-height: 20rem;
+    color: #FCF9D4;
+  }
+  img {
+    height: 25rem;
+  }
+}

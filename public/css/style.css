@@ -7,7 +7,11 @@
   font-weight: 400;
   list-style-type: none;
 }
-
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -43,7 +47,7 @@ nav a:nth-child(n + 2) {
 }
 
 .container__banner {
-  height: 50rem;
+  height: 45rem;
   background-position: center;
   background-position-x: 75%;
   background-position-y: 30%;
@@ -154,11 +158,14 @@ nav a:nth-child(n + 2) {
 }
 
 /* Footer */
+footer {
+  border-top: 1px solid black;
+}
 .container__footer {
   display: flex;
   flex-direction: column;
-  padding: 0 4rem;
   position: relative;
+  padding: 1rem 4rem 0;
   background-position-x: 100%;
   background-position-y: 100%;
   background-repeat: no-repeat;
