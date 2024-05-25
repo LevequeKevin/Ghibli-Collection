@@ -86,7 +86,6 @@ nav a:nth-child(n + 2) {
 }
 
 .text--about {
-  grid-area: 1 / 2 / 2 / 4;
   text-align: justify;
   align-self: center;
   padding: 0 5rem;
@@ -100,7 +99,9 @@ nav a:nth-child(n + 2) {
   justify-content: flex-end;
 }
 .title__img--movie h1 {
-  padding-left: 20rem;
+  padding-left: 15rem;
+  padding-right: .1rem;
+  white-space: nowrap;
 }
 .title__img--movie {
   grid-area: 1 / 3 / 2 / 4;
@@ -158,12 +159,11 @@ nav a:nth-child(n + 2) {
   flex-direction: column;
   padding: 0 4rem;
   position: relative;
-  height: 400px;
   background-position-x: 100%;
-  background-position-y: 0;
+  background-position-y: 100%;
   background-repeat: no-repeat;
   background-image: url(/img/totoro.webp);
-  background-size: 500px;
+  background-size: 300px;
 }
 .footer__section {
   display: flex;
@@ -196,40 +196,37 @@ nav a:nth-child(n + 2) {
 }
 
 /* Form */
-.container__form {
+.signup-container {
+  margin-top: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  margin-top: 2rem;
+  gap: .8rem;
+  margin-bottom: 1rem;
 }
 
-.form__text {
-  max-width: 18rem;
-}
-
-.container__submit {
-  display: flex;
-}
-
-form input {
-  height: 2.375rem;
-  width: 25rem;
-  margin: 0 .5rem;
-  line-height: 2.375rem;
-  padding: 1rem;
-}
-
-form input::placeholder {
-  line-height: 2.375rem;
+.signup-container p {
   font-size: 1rem;
 }
 
-.submit {
-  height: 2.375rem;
-  width: 5rem;
-  background-color: white;
-  border: 1px solid black;
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.signup-form button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup-form button:hover {
+  background-color: #f0f0f0;
 }
 
 .footer__copyright {
