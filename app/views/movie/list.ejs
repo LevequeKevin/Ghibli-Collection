@@ -1,0 +1,23 @@
+<%- include('../partials/_header.ejs') %>
+<div class="container__movie" id="movie">
+  <div class="title__img title__img--movie">
+    <h1>Our Movies</h1>
+    <img src="/img/movie.webp" alt="">
+  </div>
+</div>
+<div class="container__movie-card">
+  <ul>
+    <% movies.forEach(movie => { %>
+      <li>
+        <div class="container__card">
+          <img src="<%= movie.image_src %>" alt="Cover of the movie <%= movie.title %>">
+          <h3><%= movie.title %></h3>
+          <div class="movie-card__information">
+            <p><%= movie.release_date %> | <%= movie.duration%> min</p>
+            <span class="movie-card__rating"><img src="/img/rating.svg" alt="" srcset="" class="movie-card__rating--img"> <%= movie.imdb_rating %> / 10 </span>
+          </div>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+    <%- include('../partials/_footer.ejs') %>
