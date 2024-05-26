@@ -8,6 +8,9 @@ const dataMapper = {
   getOneMovie: async (id) => {
     const query = ('SELECT * FROM "movie" WHERE "id" = $1;');
     const values = [id];
+    if (!id) {
+      return null;
+    }
     const result = await client.query(query, values);
     if (result.rowCount === 0){
       return null;

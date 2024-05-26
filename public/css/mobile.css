@@ -93,6 +93,15 @@
   .signup-form input {
     width: 200px;
   }
-}
 
-/* TODO movie responsive*/
+  .container__movie-detail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container__movie-text {
+    margin: 0;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
