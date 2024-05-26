@@ -1,75 +1,77 @@
-# Ghibliotheque - Les films du studio Ghibli
+<div align="center">
+  
+# Studio Ghibli Website 
 
-## Révision 01 - Révisions - Architectures & routes
+<img src="public/img/ghibli.webp" width="50%" height="50%">
 
-<details><summary>
-Révision EJS, public folder, routes, routes paramétrées...
-</summary>
+</div><br>
 
-<br>
+This is a fan-made website dedicated to the beloved films of Studio Ghibli. The website showcases the studio's rich history and its iconic movies, providing an engaging experience for fans and newcomers alike.
 
-Votre mission, si vous l'acceptez : 
+## Features
 
-**Faire un joli site de présentation des (merveilleux) films du studio Ghibli** 
+- **Home Page**: Displays a banner with iconic scenes from Studio Ghibli movies.
+- **About Section**: Provides a brief history of Studio Ghibli, highlighting key achievements and awards.
+- **Movies Page**: Showcases a collection of popular Studio Ghibli films with details such as release dates and movie posters.
+- **Footer**: Includes contact information, social media links, and a subscription form for updates.
 
-Pour ça, trois routes : 
+## Technologies Used
 
-- Route `/` : 
-  - affiche une **page d'accueil**, avec : 
-    - une belle entête, qu'on pourra réutiliser dans les vues suivantes
-    - un lien vers la page des liste des films
+- **HTML**: For the structure of the web pages.
+- **CSS**: For styling the website and enhancing its visual appeal.
+- **JavaScript**: For interactive elements and dynamic content.
+- **Node.js**: For server-side scripting.
+- **Express.js**: For building the web application framework.
+- **PostgreSQL**: For the database to store movie details and other data.
 
+## Installation
 
-- Route `/films` : 
-  - affiche la **liste des films**
-  - on reste sobre pour chaque film : juste le `nom` du film suffira très bien.
-    - éventuellement l'image de `l'affiche` du film si on veut faire un peu de CSS
-  - si l'utilisateur clique sur un des films
+To run this project locally, follow these steps:
 
+1. **Clone the repository**:
+    ```sh
+    git clone git@github.com:LevequeKevin/Ghibli-Collection.git
+    ```
 
-- Route `/films/:id` : 
-  - affiche la **page d'un** film 
-    - (celui dont l'ID match la requête)
-  - on y affiche les autres informations qu'on possède sur le film : `titre`, `titre original`, `description`, `director`, `image de l'affiche`, `date de sortie`, `durée du film`
+2. **Navigate to the project directory**:
+    ```sh
+    cd Ghibli-Collection
+    ```
 
-- En bonus : 
-  - une **page 404**, si l'utilisateur accède à une route non déclarée ! 
+3. **Install the dependencies**:
+    ```sh
+    npm install
+    ```
 
-Pour parvenir à ce résultat, vous pouvez appliquer les notions vues en cours ! 
+4. **Set up the PostgreSQL database**:
+    - Create a new PostgreSQL databasewith data/create_db.sql
+    - Update the database configuration in a `.env` file with your database credentials.
 
+5. **Start the server**:
+    ```sh
+    nodemon index.js
+    ```
 
-Pour l'intégration (HTML/CSS), c'est libre ! Un mot d'ordre **faites sobre** ! L'objectif n'est pas de travailler le CSS ;) 
+## Acknowledgements
 
+   - Studio Ghibli for the inspiration and wonderful movies.
+   - Ujwal vinay for the [Mockup](https://dribbble.com/shots/23062504-ANIME-WEBSITE-Studio-Ghibli)
+   - Data were found on this [repo](https://github.com/janaipakos/ghibliapi) (under MIT license)
+  
+## License
 
-Bonne chance !
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-</details>
+## Image Credits
 
-## Révision 02 - Apprentissage Formulaire, GET et POST
+- Studio Ghibli
 
-<details><summary>
-Révision/approfondissement FORM, GET & POST
-</summary>
+---
 
-- Sur la page d'accueil : 
-   - Rajouter un **formulaire de recherche** qui déclenche un GET sur la route `/search` : 
-      - avec un input pour faire une recherche
-      - et un bouton pour soumettre le formulaire
-   - Implémenter la route GET `/search` côté backend : 
-      - dans un premier temps, cette route renvoie **une page** qui liste tous les films (similaire à la route /films donc).
-      - puis dans un second temps, cette route accepte des query parmams : 
-        - si on appelle cette route avec `/search?title=of` (par exemple), on affiche uniquement les films qui possède la chaine de caractère `"of"` dans le titre du film.
-        - (bonus) si on appelle cette route avec `/search?order=asc`, on affiche les films triés par ordre alphabétique du titre. Côté affichage, dans le formulaire, on pourrait mettre une checkbox qui, lorsqu'elle est cochée, rajoute ce query params dans la requête !
+### Screenshot
 
-- Sur la page d'accueil : 
-   - Rajouter un **formulaire de login** qui déclenche un POST sur la route `/login` :
-      - avec un input pour ajouter le pseudo de l'utilisateur
-      - et un bouton pour soumettre le formulaire
-   - Implémenter la route POST `/login` côté backend : 
-      - elle affiche une page avec écrit "Bonjour PSEUDO_DE_L_UTILISATEUR", et ça sera très bien !
+![Website Screenshot](screenshot/home.png)
+![Website Screenshot](screenshot/list.png)
+![Website Screenshot](screenshot/movie.png)
 
-</details>
-
-###
-
-[Mockup réaliser par ujwal vinay](https://dribbble.com/shots/23062504-ANIME-WEBSITE-Studio-Ghibli)
+---
