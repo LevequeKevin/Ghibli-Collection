@@ -1,7 +1,6 @@
 {
-  "name": "s06-ghibliotheque-levequekevin",
+  "name": "ghibli-collection",
   "version": "1.0.0",
-  "description": "<details><summary>\r Révision EJS, public folder, routes, routes paramétrées...\r </summary>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
