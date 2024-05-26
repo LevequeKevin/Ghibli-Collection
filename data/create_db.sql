@@ -41,5 +41,6 @@ INSERT INTO "movie" ("id", "title", "original_title", "description", "director",
 (22, 'Earwig and the Witch', 'アーヤと魔女', 'An orphan girl, Earwig, is adopted by a witch and comes home to a spooky house filled with mystery and magic.', 'Gorō Miyazaki', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJhFtY3eHuvvACaPpxpzdCLQqpQ.jpg', 'https://www.themoviedb.org/t/p/original/qMxpGzmmnY1jLd4p7EhhoW43wWF.jpg', 2021, 82, 4.8);
 
 CREATE TABLE IF NOT EXISTS "user_subscribe" (
+  "id" SERIAL,
   "email" VARCHAR(128) NOT NULL PRIMARY KEY
 );
