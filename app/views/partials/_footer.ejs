@@ -32,10 +32,12 @@
         <p>Sign up for exclusive updates, new arrivals & insider only discounts</p>
       </div>
       <div>
-        <form class="signup-form" method="POST">
-            <input type="email" placeholder="Your email address" required>
+        <form class="signup-form" id="signup-form" method="POST" action="/subscribe" target="hidden_iframe" onsubmit="submitted=true;">
+            <input type="email" name="email" placeholder="Your email address" required>
             <button type="submit">SUBMIT</button>
         </form>
+        <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) { showMessage(); }"></iframe>
+        <div id="message"></div>
       </div>
   </div>
   </div>
@@ -43,5 +45,6 @@
     <p>© 2024 The Studio Ghibli Collection. All Rights Reserved.</p>
   </div>
 </footer>
+<script src="/js/script.js"></script>
 </body>
 </html>

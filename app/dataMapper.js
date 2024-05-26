@@ -16,8 +16,13 @@ const dataMapper = {
       return null;
     }
     return result.rows[0];
+  },
+  registerEmail: async(email) => {
+    const query = 'INSERT INTO "user_subscribe" ("email") VALUES ($1)'
+    const value = [email]
+    const result = await client.query(query, value)
+    return result;
   }
-  // TODO Manage form
 }
 
 module.exports = dataMapper;

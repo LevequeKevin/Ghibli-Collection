@@ -203,6 +203,9 @@ footer {
 }
 
 /* Form */
+#hidden_iframe {
+  display: none;
+}
 .signup-container {
   margin-top: 1.5rem;
   display: flex;

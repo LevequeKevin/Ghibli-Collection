@@ -5,6 +5,6 @@ const movieController = require('./controllers/movieController')
 router.get("/", mainController.index);
 router.get("/movies", movieController.list);
 router.get("/movies/:id", movieController.detail);
-// TODO Manage form router.post("/");
+router.post('/subscribe', mainController.subscribe);
 
 module.exports = router;

@@ -1,6 +1,7 @@
 SET CLIENT_ENCODING TO 'UTF-8';
 
 DROP TABLE IF EXISTS "movie";
+DROP TABLE IF EXISTS "user_subscribe";
 
 CREATE TABLE IF NOT EXISTS "movie" (
   "id" INT NOT NULL PRIMARY KEY,
@@ -38,3 +39,7 @@ INSERT INTO "movie" ("id", "title", "original_title", "description", "director",
 (20, 'When Marnie Was There', '思い出のマーニー', 'The film follows Anna Sasaki living with her relatives in the seaside town. Anna comes across a nearby abandoned mansion, where she meets Marnie, a mysterious girl who asks her to promise to keep their secrets from everyone. As the summer progresses, Anna spends more time with Marnie, and eventually Anna learns the truth about her family and foster care.', 'Hiromasa Yonebayashi', 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg', 'https://image.tmdb.org/t/p/original/axUX7urQDwCGQ9qbgh2Yys7qY9J.jpg', 2014, 103, 7.7),
 (21, 'The Red Turtle', 'レッドタートル ある島の物語', 'A man set adrift by a storm wakes up on a beach. He discovers that he is on a deserted island with plenty of fresh water, fruit and a dense bamboo forest. He builds a raft from bamboo and attempts to sail away, but his raft is destroyed by an unseen monster in the sea, forcing him back to the island. He tries again with another, larger raft, but is again foiled by the creature. A third attempt again ends with the raft destroyed, but this time he is confronted by a giant red turtle, which stares at him, and forces him back to the island.', 'Michaël Dudok de Wit', 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/wOBU3SLjQ9358Km9YWYasPZyebp.jpg', 'https://image.tmdb.org/t/p/original/kjXdW5H3myRBmTMYgKayjphr2FA.jpg', 2016, 80, 7.5),
 (22, 'Earwig and the Witch', 'アーヤと魔女', 'An orphan girl, Earwig, is adopted by a witch and comes home to a spooky house filled with mystery and magic.', 'Gorō Miyazaki', 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJhFtY3eHuvvACaPpxpzdCLQqpQ.jpg', 'https://www.themoviedb.org/t/p/original/qMxpGzmmnY1jLd4p7EhhoW43wWF.jpg', 2021, 82, 4.8);
+
+CREATE TABLE IF NOT EXISTS "user_subscribe" (
+  "email" VARCHAR(128) NOT NULL PRIMARY KEY
+);
