@@ -1,6 +1,6 @@
 <div align="center">
   
-# Studio Ghibli Website 
+# Studio Ghibli Website
 
 <img src="public/img/ghibli.webp" width="50%" height="50%">
 
@@ -29,16 +29,19 @@ This is a fan-made website dedicated to the beloved films of Studio Ghibli. The 
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
+
     ```sh
     git clone git@github.com:LevequeKevin/Ghibli-Collection.git
     ```
 
 2. **Navigate to the project directory**:
+
     ```sh
     cd Ghibli-Collection
     ```
 
 3. **Install the dependencies**:
+
     ```sh
     npm install
     ```
@@ -48,15 +51,16 @@ To run this project locally, follow these steps:
     - Update the database configuration in a `.env` file with your database credentials.
 
 5. **Start the server**:
+
     ```sh
     nodemon index.js
     ```
 
 ## Acknowledgements
 
-   - Studio Ghibli for the inspiration and wonderful movies.
-   - Ujwal vinay for the [Mockup](https://dribbble.com/shots/23062504-ANIME-WEBSITE-Studio-Ghibli)
-   - Data were found on this [repo](https://github.com/janaipakos/ghibliapi) (under MIT license)
+- Studio Ghibli for the inspiration and wonderful movies.
+- Ujwal vinay for the [Mockup](https://dribbble.com/shots/23062504-ANIME-WEBSITE-Studio-Ghibli)
+- Data were found on this [repo](https://github.com/janaipakos/ghibliapi) (under MIT license)
   
 ## License
 
