@@ -53,7 +53,7 @@ To run this project locally, follow these steps:
 5. **Start the server**:
 
     ```sh
-    nodemon index.js
+    npm run dev
     ```
 
 ## Acknowledgements

@@ -1,5 +1,4 @@
 const dataMapper = require("../dataMapper");
-const client = require("../db_client");
 
 const mainController = {
   index: async (req, res) => {
@@ -13,13 +12,13 @@ const mainController = {
   subscribe: async (req, res) => {
     try{
       const info = req.body;
-      const registerEmail = await dataMapper.registerEmail(info.email);
+      await dataMapper.registerEmail(info.email);
       res.send('<script>window.parent.showMessage();</script>');
     }catch(error){
       console.error(error);
       res.status(404).render('error/404');
     }
   }
-}
+};
 
 module.exports = mainController;

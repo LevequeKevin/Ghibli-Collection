@@ -18,11 +18,11 @@ const dataMapper = {
     return result.rows[0];
   },
   registerEmail: async(email) => {
-    const query = 'INSERT INTO "user_subscribe" ("email") VALUES ($1)'
-    const value = [email]
-    const result = await client.query(query, value)
+    const query = 'INSERT INTO "user_subscribe" ("email") VALUES ($1)';
+    const value = [email];
+    const result = await client.query(query, value);
     return result;
   }
-}
+};
 
 module.exports = dataMapper;
