@@ -1,4 +1,4 @@
-const client = require('./db_client');
+const client = require('./dbClient');
 
 const dataMapper = {
   getAllMovies: async () => {
