@@ -3,7 +3,7 @@ const dataMapper = require("../dataMapper");
 const mainController = {
   index: async (req, res) => {
     try{
-      res.render('main/index');
+      res.render('pages/home');
     }catch(error){
       console.error(error);
       res.status(404).render('error/404');

@@ -18,10 +18,14 @@ const dataMapper = {
     return result.rows[0];
   },
   registerEmail: async(email) => {
+    const checkText = 'SELECT * FROM "user_subscribe" WHERE "email" = $1;';
     const query = 'INSERT INTO "user_subscribe" ("email") VALUES ($1)';
     const value = [email];
-    const result = await client.query(query, value);
-    return result;
+    const check = await client.query(checkText, value);
+    if(check.rowCount === 0) {
+      return await client.query(query, value);
+    }
+    return null;
   }
 };
 

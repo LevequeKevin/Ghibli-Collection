@@ -74,8 +74,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Screenshot
 
-![Website Screenshot](screenshot/home.png)
-![Website Screenshot](screenshot/list.png)
-![Website Screenshot](screenshot/movie.png)
+![Website Screenshot](docs/screenshot/home.png)
+![Website Screenshot](docs/screenshot/list.png)
+![Website Screenshot](docs/screenshot/movie.png)
 
 ---
